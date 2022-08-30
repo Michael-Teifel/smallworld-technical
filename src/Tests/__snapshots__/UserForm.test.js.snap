@@ -1,0 +1,566 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`does not submit if email is invalid 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      First Name:
+      <input
+        name="firstName"
+        type="text"
+      />
+    </label>
+    <label>
+      Last Name:
+      <input
+        name="lastName"
+        type="text"
+      />
+    </label>
+    <label>
+      Email Address:
+      <input
+        name="emailAddress"
+        type="email"
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        name="password"
+        type="password"
+      />
+    </label>
+    <label>
+      Company:
+      <input
+        name="company"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Title:
+      <input
+        name="jobTitle"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Function:
+      <select
+        name="jobFunction"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="Accounting"
+        >
+          Accounting
+        </option>
+        <option
+          value="Sales"
+        >
+          Sales
+        </option>
+        <option
+          value="Marketing"
+        >
+          Marketing
+        </option>
+      </select>
+    </label>
+    <label>
+      State:
+      <select
+        name="state"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="California"
+        >
+          CA
+        </option>
+        <option
+          value="Nevada"
+        >
+          NV
+        </option>
+      </select>
+    </label>
+    <label>
+      City:
+      <input
+        name="city"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`does not submit if password is missing 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      First Name:
+      <input
+        name="firstName"
+        type="text"
+      />
+    </label>
+    <label>
+      Last Name:
+      <input
+        name="lastName"
+        type="text"
+      />
+    </label>
+    <label>
+      Email Address:
+      <input
+        name="emailAddress"
+        type="email"
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        name="password"
+        type="password"
+      />
+    </label>
+    <label>
+      Company:
+      <input
+        name="company"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Title:
+      <input
+        name="jobTitle"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Function:
+      <select
+        name="jobFunction"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="Accounting"
+        >
+          Accounting
+        </option>
+        <option
+          value="Sales"
+        >
+          Sales
+        </option>
+        <option
+          value="Marketing"
+        >
+          Marketing
+        </option>
+      </select>
+    </label>
+    <label>
+      State:
+      <select
+        name="state"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="California"
+        >
+          CA
+        </option>
+        <option
+          value="Nevada"
+        >
+          NV
+        </option>
+      </select>
+    </label>
+    <label>
+      City:
+      <input
+        name="city"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`does not submit the form if jobFunction and State Are left as default 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      First Name:
+      <input
+        name="firstName"
+        type="text"
+      />
+    </label>
+    <label>
+      Last Name:
+      <input
+        name="lastName"
+        type="text"
+      />
+    </label>
+    <label>
+      Email Address:
+      <input
+        name="emailAddress"
+        type="email"
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        name="password"
+        type="password"
+      />
+    </label>
+    <label>
+      Company:
+      <input
+        name="company"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Title:
+      <input
+        name="jobTitle"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Function:
+      <select
+        name="jobFunction"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="Accounting"
+        >
+          Accounting
+        </option>
+        <option
+          value="Sales"
+        >
+          Sales
+        </option>
+        <option
+          value="Marketing"
+        >
+          Marketing
+        </option>
+      </select>
+    </label>
+    <label>
+      State:
+      <select
+        name="state"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="California"
+        >
+          CA
+        </option>
+        <option
+          value="Nevada"
+        >
+          NV
+        </option>
+      </select>
+    </label>
+    <label>
+      City:
+      <input
+        name="city"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`renders the UserForm 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      First Name:
+      <input
+        name="firstName"
+        type="text"
+      />
+    </label>
+    <label>
+      Last Name:
+      <input
+        name="lastName"
+        type="text"
+      />
+    </label>
+    <label>
+      Email Address:
+      <input
+        name="emailAddress"
+        type="email"
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        name="password"
+        type="password"
+      />
+    </label>
+    <label>
+      Company:
+      <input
+        name="company"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Title:
+      <input
+        name="jobTitle"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Function:
+      <select
+        name="jobFunction"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="Accounting"
+        >
+          Accounting
+        </option>
+        <option
+          value="Sales"
+        >
+          Sales
+        </option>
+        <option
+          value="Marketing"
+        >
+          Marketing
+        </option>
+      </select>
+    </label>
+    <label>
+      State:
+      <select
+        name="state"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="California"
+        >
+          CA
+        </option>
+        <option
+          value="Nevada"
+        >
+          NV
+        </option>
+      </select>
+    </label>
+    <label>
+      City:
+      <input
+        name="city"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</DocumentFragment>
+`;
+
+exports[`submits the form if fields are complete 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      First Name:
+      <input
+        name="firstName"
+        type="text"
+      />
+    </label>
+    <label>
+      Last Name:
+      <input
+        name="lastName"
+        type="text"
+      />
+    </label>
+    <label>
+      Email Address:
+      <input
+        name="emailAddress"
+        type="email"
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        name="password"
+        type="password"
+      />
+    </label>
+    <label>
+      Company:
+      <input
+        name="company"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Title:
+      <input
+        name="jobTitle"
+        type="text"
+      />
+    </label>
+    <label>
+      Job Function:
+      <select
+        name="jobFunction"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="Accounting"
+        >
+          Accounting
+        </option>
+        <option
+          value="Sales"
+        >
+          Sales
+        </option>
+        <option
+          value="Marketing"
+        >
+          Marketing
+        </option>
+      </select>
+    </label>
+    <label>
+      State:
+      <select
+        name="state"
+      >
+        <option
+          disabled=""
+          selected=""
+          value=""
+        >
+          Select an Option
+        </option>
+        <option
+          value="California"
+        >
+          CA
+        </option>
+        <option
+          value="Nevada"
+        >
+          NV
+        </option>
+      </select>
+    </label>
+    <label>
+      City:
+      <input
+        name="city"
+        type="text"
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+  </form>
+</DocumentFragment>
+`;

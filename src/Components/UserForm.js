@@ -4,29 +4,40 @@ import { queryAPI } from './../API/form'
 import AlertMessage from './AlertMessage';
 
 function UserForm() {
-
+  // Declare Component States
   const [formData, setFormData] = useState({
     jobFunctions: [],
     states: []
   });
   const [showAlertMessage, setShowAlertMessage] = useState(false);
   const [alertMessageProps, setAlertMessageProps] = useState({});
+  
+  // Register the useForm hook.
+  const { 
+    register, 
+    handleSubmit,
+    reset,
+    formState: {isSubmitSuccessful} } = useForm();
+  
 
+  // Initialize the default form values
   useEffect(() => {
     let response = queryAPI("https://not-a-real-endpoint.smallworld.ai/form", "GET")
     response = JSON.parse(response);
     if(response.status === 200) {
       setFormData(response.data);
     } 
-
-    // Future - Log Error to a cloud service.
   }, []);
 
-
-  const { register, handleSubmit } = useForm();
-
+  // Reset form to the default values if it is submitted succesfully
+  useEffect(() => {
+    if (isSubmitSuccessful) {
+      reset();
+    }
+  }, [isSubmitSuccessful, reset]);
+  
+  // Form Submission
   function onSubmit(data) {
-    console.log(data);
     let response = queryAPI("https://not-a-real-endpoint.smallworld.ai/form", "POST", data)
     response = JSON.parse(response);
     if(response.status === 200) {
@@ -36,7 +47,7 @@ function UserForm() {
         messageType: 'success',
         message: 'Form was succesfully submitted'
       })
-      // Need to figure out how to clear form after submit.
+      
     } else {
       setShowAlertMessage(true);
       setAlertMessageProps({
@@ -45,7 +56,8 @@ function UserForm() {
       })
     }
   }
-
+  
+  // JSX
   const jobFunctionElements = formData.jobFunctions.map(jobFunction => {
     return <option key={jobFunction} value={jobFunction}>{jobFunction}</option>;
   });
@@ -83,15 +95,15 @@ function UserForm() {
       </label>
       <label>
         Job Function:
-        <select {...register("jobFunction", {required: true})}>
-          <option value="" selected disabled hidden>Select an Option</option>
+        <select defaultValue={""}{...register("jobFunction", {required: true})}>
+          <option value="" disabled>Select an Option</option>
           {jobFunctionElements}
         </select>
       </label>
       <label>
         State:
-        <select type="text" {...register("state", {required: true})}>
-          <option value="" selected disabled hidden>Select an Option</option>f
+        <select defaultValue={""} {...register("state", {required: true})}>
+          <option value="" disabled>Select an Option</option>
           {stateElements}
         </select>
       </label>
